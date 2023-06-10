@@ -1,4 +1,3 @@
-<!doctype html>
 <html><head></head>
   <body>
   <h1>Buscar situação de empenho</h1>
