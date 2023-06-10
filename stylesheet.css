@@ -1,54 +1,44 @@
-/* Document css */
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tela de busca</title>
+        
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>        
+           
+        <div id="buscador"> 
+           
+            
+            <p id="titulo">    <b>CONSULTAR SITUAÇÃO DE EMPENHO </b> 
+            </p>
+            <br>
+                <img src="icone.jpg" height="100" width="100">         
+            <br>
+            <br>
+            <form>
+                    Nota fiscal:
+                    <br>
+                    <br>
+                        <input type="text" placeholder="Digite o número da nota fiscal">
+                    <br>
+                    <br>
+                    Número do empenho:
+                    <br>
+                    <br>
+                        <input type="text" placeholder="Digite no formato '2023NE000123'">
+                    <br>
+                    <br>
+                        <button><b>CONSULTAR</b>            
+                        </button>
+            <p id="versao"><i>Versão Beta</i></p>
+            </form>
+                
+        </div>
+       
 
-body{
-background-color: aquamarine;
-background-attachment: fixed;
-background-repeat: no-repeat;
-
-}
-
-
-#buscador{
-display: block;
-background-color:#FFF;
-text-align: center;
-margin:auto;
-height: 400px;
-width: 300px;
-position: fixed;
-top: 20%;
-left: 35%;
-font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-size: large;
-border-width:1px;
-border-color: black;
-border-style: solid;
-padding-top: 10px;
-padding-bottom: 40px ;
-padding-left:10px ;
-padding-right: 10px ;
-}
-
-
-input{
-text-align: center;
-font-size: small;
-width: 200px;
-}
-
-button{
-background-color: green;
-padding-top: 5px;
-padding-bottom: 5px;
-padding-right:10px;
-padding-left:10px;
-background-image: linear-gradient(30deg, #68f574, #4ce3f7)
-
-}
-
-#versao{
-text-align:right;
-font-size: 10px;
-color:gray;
-
-}
+        
+        
+    </body>
+</html>
