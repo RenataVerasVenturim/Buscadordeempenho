@@ -33,6 +33,10 @@ input{
 text-align: center;
 font-size: small;
 width: 250px;
+text-transform:uppercase;
+
+}
+
 }
 
 #botao{
