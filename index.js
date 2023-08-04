@@ -21,11 +21,12 @@ server.listen(port, () => {
 /*Entrada de dados */
 
 // Configuração do ID da planilha
-const SPREADSHEET_ID = 'ID_PLANILHA_DIGITE_AQUI';
+const SPREADSHEET_ID = '1EVxOlPK30nOJaI-an7dH5s7n4mQhRSq4UWpRBYxczx8';
+//planilha não editável:1do17u9OwnWRzyCMaDWWK5d0SjZqxbkFFdSF877zlCW0;
 // Credenciais do Google Sheets
 const credentials = {
-  client_email: 'DIGITE_O_SEU',
-  private_key: 'DIGITE_O_SEU',
+  client_email: 'client_email_variable',
+  private_key: 'private_key_variable',
 };
 
 // Autenticação usando OAuth 2.0
@@ -39,7 +40,7 @@ async function authenticateGoogleSheets() {
 
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
-      range: 'DIGITE_AQUI_O_NOME_DA_ABA_DA_PLANILHA', // Substitua "Sheet1" pelo nome da sua folha de planilha, se for diferente
+      range: 'Planilha de Controle', // Substitua "Sheet1" pelo nome da sua folha de planilha, se for diferente
     });
 
     console.log('Autenticação com o Google Sheets bem-sucedida.');
