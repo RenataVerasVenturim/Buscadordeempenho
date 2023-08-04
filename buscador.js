@@ -1,1 +1,0 @@
-Criar API para busca de dados no Sheets
