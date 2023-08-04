@@ -3,6 +3,7 @@
 /*Entrada de dados */
 
 const { google } = require('googleapis');
+const fs = require('fs');
 const express = require('express');
 const server = express();
 const port = 5500;
@@ -23,6 +24,7 @@ server.listen(port, () => {
 // Configuração do ID da planilha
 const SPREADSHEET_ID = '1EVxOlPK30nOJaI-an7dH5s7n4mQhRSq4UWpRBYxczx8';
 //planilha não editável:1do17u9OwnWRzyCMaDWWK5d0SjZqxbkFFdSF877zlCW0;
+//planilha editável:1EVxOlPK30nOJaI-an7dH5s7n4mQhRSq4UWpRBYxczx8;
 // Credenciais do Google Sheets
 const credentials = {
   client_email: 'client_email_variable',
@@ -40,7 +42,7 @@ async function authenticateGoogleSheets() {
 
     const response = await sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
-      range: 'Planilha de Controle', // Substitua "Sheet1" pelo nome da sua folha de planilha, se for diferente
+      range: 'Planilha de Controle', // nome da aba da planilha
     });
 
     console.log('Autenticação com o Google Sheets bem-sucedida.');
@@ -74,18 +76,26 @@ server.get('/empenhos', async (req, res) => {
       return valorDaPlanilha === numeroEmpenhoCleaned;
     });
 
+
     if (empenhoEncontrado) {
       const explanations = ["Número do processo", "Número do empenho","Ano do empenho","Nº Nota fiscal","Responsável pela liquidação","Comprovante de liquidação realizada","Status do empenho","Bloco de assinatura","Solicitação de recurso (para casos de arrecadação própria)","Comprovante de pagamento (ordem bancária)","Data de pagamento realizado","Observações"];
       const empenhoResponse = explanations.map((explanation, index) => {
         return explanation + ": " + empenhoEncontrado[index];
       });
-    
-      const formattedResponse = empenhoResponse.join("<br>"); // Adiciona quebra de linha entre cada explicação
-  res.send(formattedResponse); // Envia a resposta como uma string HTML com quebras de linha
-} else {
-        console.log('Empenho não encontrado:', numeroEmpenho);
-        res.status(404).send(`Empenho ${numeroEmpenho} não encontrado na planilha.`);
-      
+
+      const formattedResponse = empenhoResponse.join("<br>");
+
+      // Lê o conteúdo do arquivo 'template.html'
+      const templateContent = fs.readFileSync('public/template.html', 'utf8');
+
+      // Substitui o marcador '{{empenhoData}}' pelo conteúdo formatado
+      const finalHTML = templateContent.replace('{{empenhoData}}', formattedResponse);
+
+      // Envia o HTML renderizado para o cliente
+      res.send(finalHTML);
+    } else {
+      console.log('Empenho não encontrado:', numeroEmpenho);
+      res.status(404).send(`Empenho ${numeroEmpenho} não encontrado. Isto ocorre quando o empenho não existe , ou o aviso de recebimento do material ou prestação de serviço não foi realizado ainda. Caso a entrega do material/ da prestação de serviço tenha sido efetivado, solicitamos que nos envie a nota fiscal e o comprovante de entrega/execução para o e mail: compras.proppi@id.uff.br`);
     }
   } catch (error) {
     console.error('Erro ao buscar informações do empenho:', error);
