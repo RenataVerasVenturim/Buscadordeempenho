@@ -4,21 +4,24 @@ body{
 background-color: aquamarine;
 background-attachment: fixed;
 background-repeat: no-repeat;
-
 }
 
 
 #buscador{
+border-radius: 5px;
+box-shadow: 2px 2px 2px rgb(148, 142, 142);   
 display: block;
 background-color:#FFF;
 text-align: center;
 margin:auto;
+margin-top: 5px;
+margin-bottom: 5px ;
 height: 450px;
 width: 300px;
 top: 20%;
 left: 35%;
 font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-font-size: large;
+font-size: x-large;
 border-width:1px;
 border-color: black;
 border-style: solid;
@@ -69,5 +72,83 @@ padding-left:12px;
 text-align:right;
 font-size: 10px;
 color:gray;
+
+}
+
+/* Estilos do header e da navegação */
+#contact {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+}
+#about {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+header nav{
+    background-color: #f2f2f2;
+    padding: 20px;
+    display:flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(148, 142, 142);   
+
+}
+
+nav img{
+width: 70px;
+height: 70px;
+margin-right:10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+.nav_mouse:hover{
+color:#797777;
+padding:11px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color:#E89107;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e6a53c;
+    padding: 13px 25px;
+}
+
+
+/* Estilos do footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(2, 0, 0);   
 
 }

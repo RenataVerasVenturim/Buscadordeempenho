@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informações do Empenho</title>
+  <style>
+  body{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        background-color: aquamarine;
+        font-size: large;
+    }
+   div{ 
+        background-color: #FFF;
+        margin:auto;
+        margin-top: 5px ;
+        margin-bottom:5px ;
+        width: 80%;
+        padding:3px;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px rgb(148, 142, 142);
+    }
+    /* Estilos do header e da navegação */
+#contact {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+}
+#about {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+header nav{
+    background-color: #f2f2f2;
+    padding: 20px;
+    display:flex;
+    align-items: center;
+}
+
+nav img{
+width: 70px;
+height: 70px;
+margin-right:10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+}
+
+.nav_mouse:hover{
+color:#797777;
+padding:11px;
+}
+
+/* Estilos do footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+</style>
+
+</head>
+<body>
+  <!--<header>
+      <nav>
+          <img src="logo.png" alt="logo uff">
+          <ul>
+              <li><a href="#contact" class="nav_mouse">Contatos</a>
+          </ul>
+      </nav>
+  </header>
+-->
+  <main>
+    <h1>
+      DADOS DO EMPENHO
+    </h1>
+    <div id="empenhoData">{{empenhoData}}</div>
+  </main>
+  <footer>
+    <p>&copy; 2023 Universidade Federal Fluminense. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
