@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta charset="utf-8">
+    <title>Tela de busca</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>        
+       
+    <div id="buscador"> 
+       
+        <p id="titulo"><b>CONSULTAR SITUAÇÃO DE EMPENHO </b> 
+        </p>
+        <br>
+            <img src="icone.jpg" height="100" width="100">         
+        <br>
+        <br>
+        <form action="http://localhost:5500/empenhos/" method="get">
+            <!--<label for="primeirocampo">Nota fiscal:</label>
+            <br>
+            <br>
+                <input type="text" placeholder="Digite o número da nota fiscal" name="primeirocampo" id="primeirocampo">
+            <br>
+            <br>
+            //-->
+            <label for="segundocampo">Número do empenho:</label>
+            <br>
+            <br>
+            <input type="text" placeholder="Digite no formato '2023NE000123'" name="numeroEmpenho" id="segundocampo" required minlength="12" required maxlength="12">
+
+            <br>
+            <br>
+            <br>
+                <input type="submit" value="CONSULTAR" id="BOTAO">            
+            
+            <p id="versao"><i>By Renata Veras Venturim</i></p>
+        </form>
+            
+    </div>
+   
+    <script src="/index.js"></script>
+</body>
+</html>
