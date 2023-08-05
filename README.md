@@ -4,7 +4,8 @@
 <p align="center">O projeto consiste em diminuir demandas de e-mails de fornecedores que buscam informações sobre status de empenhos (liquidação e pagamento). O objetivo é utilizar a programação para fornecer acesso à informações via um buscador. A solução encontrada foi utilizar a base de dados já em uso que é a Planilha Google Sheets do Drive. O acesso se deu, em fase inicial, via servidor local utilizando npm express do node.js e autenticação do Google Cloud. Outra npm utilizada foi a googleapis.</p>
 
 <h2>Interface do usuário (HTML e CSS)</h2>
-<img src="https://github.com/RenataVerasVenturim/Google_Sheets_as_Database/assets/129551549/576e54c9-3d18-468a-aadf-2b6c1522d17a">
+<p align="center"><img src="https://github.com/RenataVerasVenturim/Google_Sheets_as_Database/assets/129551549/bb5afb31-83ba-4f5f-ad16-e93f1196db17">
+</p>
 
 <h2>Pré-requisitos:</h2>
 <ul>
@@ -30,6 +31,6 @@
 <p><img src="https://media2.giphy.com/media/pyHhg54LZ0WC9JQLoo/giphy.gif" alt="Projeto da Renata"></p>
 
 <h2>Resposta ao usuário - HTML</h2>
-<img src="https://github.com/RenataVerasVenturim/Google_Sheets_as_Database/assets/129551549/49400518-7cc8-4063-a352-1967b0972186">
+<img src="https://github.com/RenataVerasVenturim/Google_Sheets_as_Database/assets/129551549/75b8e02b-845f-4b85-9889-4e2f1b32dbee">
 
 
