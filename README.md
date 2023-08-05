@@ -26,6 +26,10 @@
 </ul>
 
 <h2>Funcionamento</h2>
-<p>Requisição via Node.js , autenticação no Google Cloud e response via json renderizada em um html com dados de toda a linha da planilha</p>
+<p>Input do usuário via form do html recebido pelo servidor local (express do node.js), autenticação no Google Cloud e resposta json renderizada em um html com dados de toda a linha da planilha. Backend em Node.js e Frontend em html e css e javascripts</p>
 <p><img src="https://media2.giphy.com/media/pyHhg54LZ0WC9JQLoo/giphy.gif" alt="Projeto da Renata"></p>
+
+<h2>Resposta ao usuário - HTML</h2>
+<img src="https://github.com/RenataVerasVenturim/Google_Sheets_as_Database/assets/129551549/49400518-7cc8-4063-a352-1967b0972186">
+
 
