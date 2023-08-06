@@ -22,8 +22,8 @@
   <li> npm i express</li>
   <li>npm i googleapis</li>
   <li> npm i fs
-  <li>npm i nodemon</li>
-  <li>npx nodemon index.js</li>
+  <li>npm i nodemon</li> //optativo. utilizei para agilizar o desenvolvimento
+  <li>npx nodemon index.js ou node index.js</li> //o nodemon é para resetar o servidor local de forma contínua (agilizou o desenvolvimento do projeto).
 </ul>
 
 <h2>Funcionamento</h2>
