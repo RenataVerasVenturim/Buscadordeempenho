@@ -1,3 +1,4 @@
+/*Inserir no terminal npx nodemon index.js */
 /*Objetivo: Criar um servidor local para teste */
 /*Declaração das variáveis */
 /*Entrada de dados */
@@ -18,17 +19,15 @@ server.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
 
-/*Objetivo: enviar requisição do cliente para servidor e servidor buscar no sheets */
+/*Objetivo: autenticação no Google Cloud */
 /*Entrada de dados */
 
 // Configuração do ID da planilha
-const SPREADSHEET_ID = '1EVxOlPK30nOJaI-an7dH5s7n4mQhRSq4UWpRBYxczx8';
-//planilha não editável:1do17u9OwnWRzyCMaDWWK5d0SjZqxbkFFdSF877zlCW0;
-//planilha editável:1EVxOlPK30nOJaI-an7dH5s7n4mQhRSq4UWpRBYxczx8;
+const SPREADSHEET_ID = 'DIGITE_O_ID_DA_SUA_PLANILHA'; //Entre o "/d/" e "/edit"
 // Credenciais do Google Sheets
 const credentials = {
-  client_email: 'client_email_variable',
-  private_key: 'private_key_variable',
+  client_email: 'DIGITE_SEU_CLIENT_EMAIL',
+  private_key: 'DIGITE_SEU_PRIVATE_KEY',
 };
 
 // Autenticação usando OAuth 2.0
